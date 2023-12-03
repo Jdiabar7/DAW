@@ -1,0 +1,142 @@
+
+/*
+ * Hacer un sendero.
+ *  @Author Jose Luis Triano PavÃ³n
+ */
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int metros;
+        int numero;
+
+        System.out.println("Introduce los metros del sendero");
+        metros = s.nextInt();
+
+        for (int i = 0; i <= metros; i++) {
+
+            numero = (int) ((Math.random() * 4) + 2);
+
+            if (numero % 2 == 0) {// si no hay obstaculo
+                numero = (int) ((Math.random() * 3));
+                switch (numero) {
+                    case 0:
+                        System.out.println(" |    | ");
+                        break;
+                    case 1:
+                        System.out.println("|    | ");
+                        break;
+                    case 2:
+                        System.out.println("  |    |");
+                        break;
+                }
+            } else {// si hay obstaculo
+                numero = (int) ((Math.random() * 4) + 2);
+                if (numero % 2 == 0) { // La clase de obstaculo
+                    numero = (int) ((Math.random() * 2));
+                    if (numero == 0) {// planta
+                        numero = (int) ((Math.random() * 12));
+                        switch (numero) {
+                            case 0:
+                                System.out.println(" |*   | ");
+                                break;
+                            case 1:
+                                System.out.println(" | *  | ");
+
+                                break;
+                            case 2:
+                                System.out.println(" |  * | ");
+
+                                break;
+                            case 3:
+                                System.out.println(" |   *| ");
+
+                                break;
+                            case 4:
+                                System.out.println("|*   | ");
+                                break;
+                            case 5:
+                                System.out.println("| *  | ");
+
+                                break;
+                            case 6:
+                                System.out.println("|  * | ");
+
+                                break;
+                            case 7:
+                                System.out.println("|   *| ");
+                                break;
+                            case 8:
+                                System.out.println("  |*   | ");
+                                break;
+                            case 9:
+                                System.out.println("  | *  | ");
+
+                                break;
+                            case 10:
+                                System.out.println("  |  * | ");
+
+                                break;
+                            case 11:
+                                System.out.println("  |   *| ");
+                                break;
+                        }
+                    } else {
+                        numero = (int) ((Math.random() * 12));
+                        switch (numero) {
+                            case 0:
+                                System.out.println(" |0   | ");
+                                break;
+                            case 1:
+                                System.out.println(" | 0  | ");
+
+                                break;
+                            case 2:
+                                System.out.println(" |  0 | ");
+
+                                break;
+                            case 3:
+                                System.out.println(" |   0| ");
+
+                                break;
+                            case 4:
+                                System.out.println("|0   | ");
+                                break;
+                            case 5:
+                                System.out.println("| 0  | ");
+
+                                break;
+                            case 6:
+                                System.out.println("|  0 | ");
+
+                                break;
+                            case 7:
+                                System.out.println("|   0| ");
+                                break;
+                            case 8:
+                                System.out.println("  |0   | ");
+                                break;
+                            case 9:
+                                System.out.println("  | 0  | ");
+
+                                break;
+                            case 10:
+                                System.out.println("  |  0 | ");
+
+                                break;
+                            case 11:
+                                System.out.println("  |   0| ");
+                                break;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+}
